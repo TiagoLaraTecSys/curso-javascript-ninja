@@ -120,13 +120,11 @@ carro.adicionarPessoas = function(nPessoas){
 
         return 'Carro já está cheio!';
 
-    } else if(nPessoas > assentoLivre && assentoLivre > 1){
+    } else if(nPessoas > assentoLivre){
+        
+        var pluralSingular = assentoLivre === 1 ? 'pessoa' : 'pessoas';
+        return 'Só cabem mais ' + assentoLivre + pluralSingular;
 
-        return 'Só cabem mais ' + assentoLivre + ' pessoas!';
-
-    } else if(nPessoas > assentoLivre && assentoLivre == 1){
-
-        return 'Só cabem mais ' + assentoLivre + ' pessoa!';
     } else {
 
         return carro.quantidadePessoas += nPessoas; 
@@ -141,19 +139,19 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-carro.cor; // Branco
+carro.obterCor(); // Branco
 
 // Mude a cor do carro para vermelho.
 carro.mudarCor('vermelho'); //undefined
 
 // E agora, qual a cor do carro?
-carro.cor; // vermelho
+carro.obterCor(); // vermelho
 
 // Mude a cor do carro para verde musgo.
 carro.mudarCor('verde musgo'); //undefined
 
 // E agora, qual a cor do carro?
-carro.cor; // verde musgo
+carro.obterCor(); // verde musgo
 
 // Qual a marca e modelo do carro?
 carro.obterMarcaModelo(); // Esse carro é um Ford Fiest
