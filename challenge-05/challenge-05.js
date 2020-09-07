@@ -18,7 +18,7 @@ Imprima o segundo índice do array retornado pela função criada acima.
 function myFunction2(arg){
     return arg[1];
 }
-console.log(myFunction2(myArray));
+console.log(myFunction(myArray)[1]);
 
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
@@ -60,19 +60,22 @@ os livros.
 */
 function book(livro){
     var obj = {
-        'Antifragil': {quantidadePaginas: 600,
-                 autor: 'Nassin taleb',
-                 editora: 'bunda Cagada'},
-        'tiaguete': {quantidadePaginas: 300,
-                 autor: 'Tiagao',
-                 editora: 'Andrea'},
-        'guia': {quantidadePaginas: 60,
-                 autor: 'Preguiçoso',
-                 editora: 'Facin editar'}
+        'Antifragil': {
+            quantidadePaginas: 600,
+            autor: 'Nassin taleb',
+            editora: 'bunda Cagada'},
+        'tiaguete': {
+            quantidadePaginas: 300,
+            autor: 'Tiagao',
+            editora: 'Andrea'},
+        'guia': {
+            quantidadePaginas: 60,
+            autor: 'Preguiçoso',
+            editora: 'Facin editar'}
     };
 
-    var retornar = livro===undefined ? obj : obj[livro];
-    return retornar;
+    return livro===undefined ? obj : obj[livro];
+    
 }
 
 /*
